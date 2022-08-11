@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: radial-gradient(circle, #f7f0ff, #ecdffe, #dfcffc, #d1bffc, #c2affb);
+    font-family: sans-serif;
+    color: #36413E;
+
+}
+
+section {
+    padding: 1rem;
+}
+
+.page-grid {
+    min-height: 100vh;
+    display: grid;
+    align-content: space-between;
+}
+
+
+/* Header set-up */
+.header-container {
+    background-image: linear-gradient(13.26deg, #A79696 -80.77%, rgba(245, 238, 238, 0) 100.62%);
+    filter: drop-shadow(10px 21px 12px rgba(0, 0, 0, 0.25));
+    position: sticky;
+    max-height: 25vh;
+    border-radius: 10px;
+}
+
+.layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-items: start;
+}
+
+.book {
+    max-width: 10vw;
+    filter: drop-shadow(9px 9px 7px rgba(0, 0, 0, 0.25));
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1em;
+    cursor: pointer;
+}
+
+.dropdown span {
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 24px;
+    color: #F2A202;
+    font-style: italic;
+}
+a{
+    transition: 0.2s ease-in-out;
+}
+ul{
+    display: flex;
+}
+ul li{
+position: relative;
+left: 0;
+opacity: 0;
+transition: 0.2s;
+}
+.dropdown ul li {
+    list-style: none;
+    display: inline-block;
+    padding-inline: 0.6rem;
+    color: #F2A202;
+    font-style: italic;
+    
+}
+
+/* Main container styling */
+
+main {
+    max-width: 80vw;
+    background-image: linear-gradient(to right bottom, #beb2c8, #b1a4c2, #a296bc, #9289b7, #807cb2);
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 9px 11px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Footer Styling */
+.footer-container {
+    max-width: 80vw;
+    background-image: linear-gradient(to right bottom, #beb2c8, #b1a4c2, #a296bc, #9289b7, #807cb2);
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 20px;
+    box-shadow: 9px 11px 4px rgba(0, 0, 0, 0.25);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer span {
+    font-size: 20px;
+    font-family: fantasy;
+    font-style: italic;
+    padding-inline: 1rem;
+}
+
+footer img {
+    padding-inline: 20px;
+    max-width: 9vw;
+}
+
+/*General Animation Styling */
+img {
+    transition: 0.3s;
+}
+
+img:hover {
+    transform: scale(1.2);
+}
+a:hover{
+    color: white;
+}
+
+/* ::before ::after example/ Menu animation. */
+
+.dropdown:hover {
+    width: fit-content;
+}
+
+
+.spacer {
+    display: inline-block;
+    width: 50%;
+}
+
+.spacer::after {
+    content: "";
+    border-bottom: 3.5px solid #F2A202;
+    width: 7%;
+    display: inline-block;
+    position: relative;
+    left: 41%;
+    transform-origin: left;
+    transform: scale(0, 1);
+    transition: 0.25s ease-in-out;
+    
+}
+
+.dropdown:hover .spacer::after {
+    width: 7%;
+    position: absolute;
+    left: 41%;
+    transform: scale(1, 1);
+}
+
+.dropdown:hover ul li{
+    left: 60%;
+    opacity: 1;
+}
+li:nth-child(1){
+    transition-delay: 0.1s;
+}
+li:nth-child(2){
+    transition-delay: 0.2s;
+}
+li:nth-child(3){
+    transition-delay: 0.3s;
+}
+
